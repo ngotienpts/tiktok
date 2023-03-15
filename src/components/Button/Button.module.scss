@@ -1,0 +1,92 @@
+.wrapper {
+    min-width: 10rem;
+    height: 3.6rem;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    border-radius: 0.4rem;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+
+    + .wrapper {
+        margin-left: 1.6rem;
+    }
+}
+.round {
+    border-radius: 999px;
+    border-color: rgba(22, 24, 35, 0.12);
+    padding: 0 0.8rem;
+    min-width: 9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+.primary {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: currentColor;
+
+    &:hover,
+    &:active {
+        border-color: currentColor;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)), #fe2c55;
+    }
+}
+.small {
+    height: 2.8rem;
+    min-width: 8.8rem;
+    padding: 0 1rem;
+}
+.medium {
+    font-size: 1.4rem;
+    min-width: 9rem;
+    height: 3.2rem;
+    padding: 0 0.8rem;
+}
+.large {
+    min-width: 16.8rem;
+    width: 100%;
+    min-height: 4.8rem;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+}
+.outlinePrimary {
+    color: var(--primary);
+    border-color: currentColor;
+    &:hover,
+    &:active {
+        border-color: currentColor;
+        background-color: rgba(255, 44, 85, 0.06);
+    }
+}
+.outlineSecondary {
+    min-width: 110px;
+    padding: 0 16px;
+    border-radius: 0.2rem;
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover,
+    &:active {
+        border-color: rgba(22, 24, 35, 0.12);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+.disable {
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.8;
+}
+.icon + .text,
+.text + .icon {
+    margin-left: 0.8rem;
+}
+.icon {
+    font-size: 1.4rem;
+}

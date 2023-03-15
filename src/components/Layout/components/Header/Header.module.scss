@@ -1,0 +1,104 @@
+.wrapper {
+    --search-border-92: 92px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 1px;
+    height: var(--default-layout-header-height);
+}
+
+.inner {
+    height: 100%;
+    width: var(--default-layout-width);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-result,
+.search {
+    width: 361px;
+}
+
+.search {
+    position: relative;
+    height: 46px;
+    padding-left: 16px;
+    background-color: rgba(22, 24, 35, 0.06);
+    border-radius: var(--search-border-92);
+    border: 1.5px solid transparent;
+    display: flex;
+    &::after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 28px;
+        background-color: rgba(22, 24, 35, 0.12);
+        right: 52px;
+        top: 9px;
+    }
+    &:focus-within {
+        border: 1.5px solid rgba(22, 24, 35, 0.2);
+    }
+    input {
+        flex: 1;
+        height: 100%;
+        font-size: 1.6rem;
+        caret-color: var(--primary);
+        color: var(--black);
+        background-color: transparent;
+    }
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: var(--text-color);
+    }
+}
+
+.loading,
+.clear {
+    position: absolute;
+    right: 52px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(22, 24, 35, 0.34);
+    margin: 0 12px;
+}
+
+.search-btn {
+    width: 52px;
+    height: 100%;
+    border-top-right-radius: var(--search-border-92);
+    border-bottom-right-radius: var(--search-border-92);
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.34);
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        cursor: pointer;
+    }
+    &:active {
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+.search-title {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+}
+.actions {
+    display: flex;
+    align-items: center;
+}
+.custom-color {
+    color: red;
+}
+.more-btn {
+    position: relative;
+    font-size: 2rem;
+    margin-left: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    background-color: transparent;
+}
+// menu
+.menu-items {
+    min-width: 22.3rem;
+}
