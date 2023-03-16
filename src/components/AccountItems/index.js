@@ -9,7 +9,7 @@ function AccountItems() {
     return (
         <div className={cx('wrapper')}>
             <img
-                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/fdd0c0deb03af5576ae12c894c3ab86d~c5_100x100.jpeg?x-expires=1678932000&x-signature=uBDWzUHOcgr9I%2BYETVHbNS40B9s%3D"
+                src="https://i.pinimg.com/564x/b1/91/f7/b191f77213d70ad6569a5e8bc24a2d84.jpg"
                 alt="name"
                 className={cx('avatar')}
             />
