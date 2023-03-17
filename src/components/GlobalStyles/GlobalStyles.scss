@@ -14,7 +14,7 @@
     --default-layout-sidebar-width: 356px;
     --black: #000;
     --white: #fff;
-    --text-color: #333;
+    --text-color: #161823;
 }
 
 html {
@@ -56,4 +56,20 @@ a[href] {
 a:hover,
 a:active {
     color: inherit;
+}
+
+body .tippy-box {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    border-radius: 0.8rem;
+    height: 3.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(84, 84, 84, 0.92);
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
 }

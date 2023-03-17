@@ -11,6 +11,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
 }
 
 .search-result,
@@ -88,8 +90,10 @@
     display: flex;
     align-items: center;
 }
-.custom-color {
-    color: red;
+
+.current-user {
+    display: flex;
+    align-items: center;
 }
 .more-btn {
     position: relative;
@@ -97,4 +101,23 @@
     margin-left: 1.2rem;
     padding: 0.4rem 0.8rem;
     background-color: transparent;
+}
+.action-btn {
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 2rem;
+    color: rgba(22, 24, 35, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin-left: 1.6rem;
+}
+.avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    margin-left: 2.4rem;
 }
