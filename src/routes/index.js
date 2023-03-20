@@ -13,11 +13,11 @@ const publicRoute = [
         component: Home,
     },
     {
-        path: 'following',
+        path: '/following',
         component: Following,
     },
     {
-        path: '/profile',
+        path: '/@/:nickname',
         component: Profile,
     },
     {
