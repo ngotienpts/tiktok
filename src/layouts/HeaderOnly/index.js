@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import './HeaderOnly.module.scss';
 
@@ -11,5 +12,9 @@ function HeaderOnly({ children }) {
         </div>
     );
 }
+
+HeaderOnly.propsTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 export default HeaderOnly;

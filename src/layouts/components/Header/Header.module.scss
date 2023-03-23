@@ -1,5 +1,11 @@
 .wrapper {
     --search-border-92: 92px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--white);
     box-shadow: rgb(0 0 0 / 12%) 0px 1px 1px;
     height: var(--default-layout-header-height);
 }
@@ -13,6 +19,9 @@
     justify-content: space-between;
     padding-left: 2.4rem;
     padding-right: 2.4rem;
+}
+.logo-link {
+    display: flex;
 }
 
 .actions {

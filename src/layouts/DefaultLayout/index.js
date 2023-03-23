@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
 import Header from '../components/Header';
@@ -16,5 +17,7 @@ function DefaultLayout({ children }) {
         </div>
     );
 }
-
+DefaultLayout.propsTypes = {
+    children: PropTypes.node.isRequired,
+};
 export default DefaultLayout;

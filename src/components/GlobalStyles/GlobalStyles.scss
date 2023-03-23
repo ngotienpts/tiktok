@@ -54,6 +54,7 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
+    overflow: overlay;
 }
 
 button,
@@ -61,6 +62,7 @@ input,
 [tabindex] {
     border: none;
     outline: none;
+    font-family: 'ProximaNova', sans-serif;
 }
 button,
 [tabindex] {

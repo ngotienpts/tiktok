@@ -25,11 +25,14 @@
 }
 .menu-popper {
     padding-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .sub-menu {
     height: 5rem;
     position: relative;
+    flex-shrink: 0;
     &__icon {
         width: 5rem;
         height: 100%;
@@ -42,6 +45,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+}
+.menu-body {
+    overflow-y: auto;
 }
 .separate {
     border-top: 1px solid rgba(22, 24, 35, 0.12);

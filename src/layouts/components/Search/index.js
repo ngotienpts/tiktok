@@ -9,7 +9,7 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItems from '~/components/AccountItems';
 import styles from './Search.module.scss';
 import { SearchIcon } from '~/components/Icons';
-import * as searchServices from '~/apiServices/searchServies';
+import * as searchServices from '~/services/searchServies';
 
 const cx = classNames.bind(styles);
 
@@ -31,7 +31,6 @@ function Search() {
             setLoading(true);
 
             const result = await searchServices.search(debounced);
-            console.log(result);
             setSearchResult(result);
 
             setLoading(false);
@@ -52,13 +51,8 @@ function Search() {
 
     const handleChangeInput = (e) => {
         // kiểm tra xem ký tự đầu tiên nhập vào có phải là dấu cách hay ko?
-        if (e.target.value.startsWith(' ')) {
-            // đưa con trỏ xuống cuối khi input đã có ký tự nhưng người dùng lại để dấu cách ở đầu
-            if (searchValue !== '') {
-                e.setSelectionRange(e.target.value.length, e.target.value.length, 0);
-            }
-            setSearchValue('');
-        } else {
+        const seacrhValue = e.target.value;
+        if (!seacrhValue.startsWith(' ')) {
             setSearchValue(e.target.value);
         }
     };
@@ -87,7 +81,7 @@ function Search() {
                         value={searchValue}
                         placeholder="Search acount and videos"
                         spellCheck={false}
-                        onChange={(e) => handleChangeInput(e)}
+                        onChange={handleChangeInput}
                         onFocus={() => setShowResult(true)}
                     />
                     {!!searchValue && !loading && (
@@ -98,7 +92,7 @@ function Search() {
 
                     {loading && <FontAwesomeIcon icon={faSpinner} className={cx('loading')} />}
 
-                    <button className={cx('search-btn')}>
+                    <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                         <SearchIcon />
                     </button>
                 </div>
